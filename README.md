@@ -16,7 +16,7 @@
 This project utilizes a **GitOps** approach for automated deployment. Below is the architectural flow used to deploy the application from development to the EKS production cluster.
 
 <div align="center">
-<img src="./images/JobPipeline.png" alt="CI/CD Architecture" width="900"/>
+<img src="JobPipeline.png" alt="CI/CD Architecture" width="900"/>
 </div>
 
 ### 🛠️ Tech Stack
