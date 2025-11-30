@@ -20,14 +20,14 @@ This project follows a strict **GitOps Architecture** by decoupling source code 
 
 | Repository | Type | Description |
 | :--- | :--- | :--- |
-| **[Main Repo](https://github.com/wth-aryan/register-app.git)** | 🏗️ **Application** | Contains the Java Source Code, `Dockerfile`, and the CI Pipeline (`Jenkinsfile`). |
-| **[Config Repo](https://github.com/wth-aryan/gitops-register-app)** | ⚙️ **Manifests** | Contains Kubernetes configuration files (`deployment.yaml`, `service.yaml`) which are monitored by ArgoCD. |
+| **[Main Repo](https://github.com/wth-aryan/register-app.git)** | 🏗️**Application** | Contains the Java Source Code, `Dockerfile`, and the CI Pipeline (`Jenkinsfile`). |
+| **[Config Repo](https://github.com/wth-aryan/gitops-register-app)** | ⚙️**Manifests** | Contains Kubernetes configuration files (`deployment.yaml`, `service.yaml`) which are monitored by ArgoCD. |
 
 ### 🔗 How they connect
 1. **Jenkins** builds the Docker image and pushes it to DockerHub.
 2. **Jenkins** then automatically triggers a Git commit to the **Config Repo** to update the image tag.
 3. **ArgoCD** detects the change in the Config Repo and syncs the live cluster.
-
+---
 <div align="center">
 <img src="./Images/JobPipeline.png" alt="CI/CD Architecture" width="900"/>
 </div>
